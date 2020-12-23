@@ -1,0 +1,30 @@
+{
+  "name": "gfxgrab",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "devDiffPort": "next dev -p 3001",
+    "devServer": "next dev -p 80",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.2",
+    "@material-ui/icons": "^4.11.2",
+    "moment": "^2.29.1",
+    "next": "10.0.3",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-spinners": "^0.9.0",
+    "sass": "^1.30.0",
+    "swr": "^0.3.9"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.0",
+    "@vercel/node": "^1.8.5",
+    "got": "^11.8.0",
+    "jsdom": "^16.4.0",
+    "typescript": "^4.1.2"
+  }
+}
