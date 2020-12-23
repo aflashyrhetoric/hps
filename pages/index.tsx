@@ -2,7 +2,19 @@ import React, { useState, useEffect } from "react"
 import Head from "next/head"
 import styles from "../styles/Home.module.scss"
 
+import { CopyToClipboard } from "react-copy-to-clipboard"
+
 export default function Home() {
+  const [copied, setCopied] = useState(false)
+
+  useEffect(() => {
+    if (copied) {
+      setTimeout(() => {
+        setCopied(false)
+      }, 1000)
+    }
+  }, [copied])
+
   return (
     <>
       <Head>
@@ -23,43 +35,100 @@ export default function Home() {
         />
       </Head>
 
-      <main className={styles.main}>
+      <main className={`${styles.main} main`}>
         <div className={styles.left}>
           <div className={styles.color}>
-            <p className="animate__animated animate__fadeInLeft">speech language pathologist </p>
+            <p className="animate__animated animate__fadeInLeft">
+              speech language pathologist{" "}
+            </p>
           </div>
           {/* <div className={styles.portrait}></div> */}
         </div>
         <div className={styles.right}>
-          <div className={styles.rightInner}>
+          <div
+            className={`${styles.rightInner} animate__animated animate__fadeIn`}
+          >
             <h1 style={{ marginBottom: "5px", marginTop: "-3px" }}>
               hello, i'm heather park
             </h1>
-
             <p>
-              I'm a Speech Language Pathologist based in New York, NY. My
-              hobbies are eating kimchi jigae and petting my mini moo! Lorem
-              ipsum dolor sit, amet consectetur adipisicing elit. Fuga, nam.
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam nam
-              error impedit necessitatibus porro ex?
+              I am a Korean-English Bilingual Speech Language Pathologist,
+              licensed in New York and certified through the national American
+              Speech-Language-Hearing Association since 2019. Currently working
+              at the DoE to provide bilingual speech-language services.
+            </p>
+            {/* <p>
+              I provide bilingual speech-language services with the
+              NYC Department of Education. My passion lies in helping my
+              students to realize their potential. I am learning every day, in
+              ways I can fine tune my clinical skills, Korean speaking
+              abilities, and more.  
+            </p> */}
+            <p>
+              Previously, I’ve worked at public charter schools in Harlem,
+              adapting quickly to manage caseloads of upwards to 55+ students
+              and strategically leveraging available resources. I’ve also worked
+              with patients at various skilled nursing facilities, who presented
+              with dysphagia, dysarthria, aphasia, dysphonia, dementia, etc.
             </p>
 
-            <div style={{ marginBottom: "30px" }} />
+            {/* <p>I run an online Facebook group </p> */}
+            <div style={{ marginBottom: "20px" }} />
             <div className={styles.tryptech}>
               <div>
-                <span>CONNECT</span>
+                <span>CONTACT</span>
                 <ul>
-                  <li>Blog</li>
-                  <li>Email</li>
-                  <li>Newsletter</li>
+                  {/* <li>Blog</li> */}
+                  <li>
+                    <CopyToClipboard
+                      text="heatherpark.slp@gmail.com"
+                      onCopy={() => setCopied(true)}
+                    >
+                      <span>heatherpark.slp@gmail.com</span>
+                    </CopyToClipboard>
+
+                    {copied && (
+                      <span
+                        className={`animate__animated animate__fadeOut ${styles.copied}`}
+                      >
+                        Copied!
+                      </span>
+                    )}
+                  </li>
+                  {/* <li>Newsletter</li> */}
                 </ul>
               </div>
               <div>
-                <span>SOCIAL</span>
+                <span>SOCIALS</span>
                 <ul>
-                  <li>Twitter</li>
-                  <li>Instagram</li>
-                  <li>LinkedIn</li>
+                  {/* <li>Twitter</li> */}
+                  <li>
+                    <a
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      href="https://www.facebook.com/groups/koreanslps"
+                    >
+                      Korean SLPs @ Facebook
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      href="https://www.instagram.com/thekoreanslp/"
+                    >
+                      Instagram
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      href="https://www.linkedin.com/in/heather-park-0696ab136/"
+                    >
+                      LinkedIn
+                    </a>
+                  </li>
                 </ul>
               </div>
               {/* <div>
