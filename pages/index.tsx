@@ -1,99 +1,86 @@
 import React, { useState, useEffect } from "react"
 import Head from "next/head"
 import styles from "../styles/Home.module.scss"
-import moment from "moment"
-
-import ClipLoader from "react-spinners/ClipLoader"
-
-import { ProductPageStatus, Stocked } from "./api/shared"
-import useSWR from "swr"
-import GraphicsCardStatus from "./GraphicsCardStatus"
-import GraphicsCardTable from "./GraphicsCardTable"
-
-import { createMuiTheme } from "@material-ui/core/styles"
-import { ThemeProvider } from "@material-ui/styles"
-
-const theme = createMuiTheme({
-  palette: {
-    type: "dark",
-  },
-})
-
-export const fetcher = url => fetch(url).then(r => r.json())
-
-const REFRESH_INTERVAL_MS = 5 * 60 * 1000
-
-export interface ProductPageStatusesResponse {
-  statuses: ProductPageStatus[]
-  isLoading: boolean
-  isError: boolean
-}
-
-export const useStatuses = (): ProductPageStatusesResponse => {
-  const { data, error } = useSWR("/api/scour", fetcher, {
-    refreshInterval: REFRESH_INTERVAL_MS,
-  })
-
-  return {
-    statuses: data,
-    isLoading: !error && !data,
-    isError: error,
-  }
-}
 
 export default function Home() {
-  const { statuses, isLoading, isError } = useStatuses()
-
-  const initialLoad = Date.now()
-  const [lastUpdated, setLastUpdated] = useState(Date.now())
-
-  const alert = statuses
-    ? statuses
-        .filter(s => s !== null)
-        .map(s => s.status)
-        .includes(Stocked.IN_STOCK)
-    : false
-
-  useEffect(() => {
-    setInterval(function () {
-      setLastUpdated(Date.now())
-    }, 3000)
-  }, [])
-
   return (
-    <div
-      className={styles.container}
-      style={{ background: !alert ? "#171717" : "#4f0000" }}
-    >
+    <>
       <Head>
-        <title>{alert ? "ALERT" : "OUT OF STOCK"}</title>
+        <title>heather park: slp</title>
         <link rel="icon" href="/favicon.ico" />
-        <link
+        {/* <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+        /> */}
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Montserrat:wght@300;700&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         />
       </Head>
 
       <main className={styles.main}>
-        <div style={{ marginBottom: "1.5rem" }}></div>
+        <div className={styles.left}>
+          <div className={styles.color}>
+            <p className="animate__animated animate__fadeInLeft">speech language pathologist </p>
+          </div>
+          {/* <div className={styles.portrait}></div> */}
+        </div>
+        <div className={styles.right}>
+          <div className={styles.rightInner}>
+            <h1 style={{ marginBottom: "5px", marginTop: "-3px" }}>
+              hello, i'm heather park
+            </h1>
 
-        <ClipLoader size={60} color="fff" loading={isLoading} />
+            <p>
+              I'm a Speech Language Pathologist based in New York, NY. My
+              hobbies are eating kimchi jigae and petting my mini moo! Lorem
+              ipsum dolor sit, amet consectetur adipisicing elit. Fuga, nam.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam nam
+              error impedit necessitatibus porro ex?
+            </p>
 
-        {statuses && statuses.length > 0 && !isLoading && (
-          <>
-            <GraphicsCardStatus
-              isAlert={alert}
-              lastUpdatedText={
-                lastUpdated && initialLoad
-                  ? moment(lastUpdated).from(initialLoad)
-                  : "IDK"
-              }
-            />
-            <div style={{ marginBottom: "10px" }} />
-            {/* <GraphicsCardTable statuses={statuses} /> */}
-          </>
-        )}
+            <div style={{ marginBottom: "30px" }} />
+            <div className={styles.tryptech}>
+              <div>
+                <span>CONNECT</span>
+                <ul>
+                  <li>Blog</li>
+                  <li>Email</li>
+                  <li>Newsletter</li>
+                </ul>
+              </div>
+              <div>
+                <span>SOCIAL</span>
+                <ul>
+                  <li>Twitter</li>
+                  <li>Instagram</li>
+                  <li>LinkedIn</li>
+                </ul>
+              </div>
+              {/* <div>
+                <span>NETWORK</span>
+                <ul>
+                  <li>One</li>
+                  <li>Two</li>
+                  <li>Three</li>
+                </ul>
+              </div> */}
+            </div>
+            <div style={{ marginBottom: "30px" }} />
+            {/* <blockquote>
+              Making effective communication, a human right, accessible and
+              achievable for all.
+              <span>- ASHA</span>
+            </blockquote> */}
+            <small>(c) 2020 Heather Park</small>
+          </div>
+        </div>
       </main>
-    </div>
+    </>
   )
 }
