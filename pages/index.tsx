@@ -89,7 +89,7 @@ export default function Home() {
 
                     {copied && (
                       <span
-                        className={`animate__animate animate__fadeOut ${styles.copied}`}
+                        className={`animate__animated animate__fadeOut ${styles.copied}`}
                       >
                         Copied!
                       </span>
