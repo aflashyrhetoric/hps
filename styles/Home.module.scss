@@ -105,8 +105,11 @@ $_purple-alt-2: #ede1fc;
     padding: 2rem;
 
     @include bp(md) {
-      padding: 4rem;
+      padding: 2.5rem;
       align-items: center;
+    }
+    @include bp(lg) {
+      padding: 4rem;
     }
   }
 
@@ -181,13 +184,13 @@ $_purple-alt-2: #ede1fc;
     width: 100%;
 
     > div {
-      width: 50%;
+      width: 100%;
       display: flex;
       flex-flow: column;
 
-      // @include bp(md) {
-      //   width: 33%;
-      // }
+      @include bp(md) {
+        width: 50%;
+      }
 
       > span {
         margin-bottom: 0;
@@ -219,8 +222,10 @@ $_purple-alt-2: #ede1fc;
           color: $_white-ice;
         }
 
-        a {
-          &:active {
+        a,
+        span {
+          &:active,
+          &:hover {
             color: $_purple;
           }
         }
@@ -229,12 +234,22 @@ $_purple-alt-2: #ede1fc;
   }
 }
 
+$_arrow-color: $_white-ice;
+
 .copied {
+  position: absolute;
+  left: 120px;
+  top: -35px;
   height: 30px;
-  width: 100px;
-  background:$_white-ice;
+  width: 80px;
+  text-align: center;
+  background: $_white-ice;
   color: rgb(22, 22, 22) !important;
   padding: 2px;
-  border-radius: 3px;
+  padding-top: 4px;
+  border-radius: 0px;
   margin-left: 3px;
+  font-weight: bold;
+  border: 0;
+  box-shadow: 0 2px 4px 2px rgb(20, 20, 20);
 }

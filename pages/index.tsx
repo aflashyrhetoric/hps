@@ -79,7 +79,7 @@ export default function Home() {
                 <span>CONTACT</span>
                 <ul>
                   {/* <li>Blog</li> */}
-                  <li>
+                  <li style={{ position: "relative" }}>
                     <CopyToClipboard
                       text="heatherpark.slp@gmail.com"
                       onCopy={() => setCopied(true)}
@@ -89,7 +89,7 @@ export default function Home() {
 
                     {copied && (
                       <span
-                        className={`animate__animated animate__fadeOut ${styles.copied}`}
+                        className={`animate__animate animate__fadeOut ${styles.copied}`}
                       >
                         Copied!
                       </span>
