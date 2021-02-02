@@ -146,7 +146,7 @@ export default function Home() {
                     <a
                       rel="noopener noreferrer"
                       target="_blank"
-                      href="https://drive.google.com/file/d/1OC17YlhgkAXuDpz2aFkTjfhS3UNkfu-c/view?usp=sharing"
+                      href="https://www.teacherspayteachers.com/Product/Tips-For-Tots-Encouraging-Your-Children-to-Talk-6526232"
                     >
                       <span className={styles.tag}>FREE</span>
                       Tips For Tots: Encouraging Your Children To Talk 
