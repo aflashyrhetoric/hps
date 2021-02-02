@@ -149,7 +149,7 @@ export default function Home() {
                       href="https://drive.google.com/file/d/1OC17YlhgkAXuDpz2aFkTjfhS3UNkfu-c/view?usp=sharing"
                     >
                       <span className={styles.tag}>FREE</span>
-                      Tips For Tots: Encouraging Children To Speak
+                      Tips For Tots: Encouraging Your Children To Talk 
                     </a>
                   </li>
                   <li>
