@@ -101,7 +101,15 @@ export default function Home() {
               <div>
                 <span>SOCIALS</span>
                 <ul>
-                  {/* <li>Twitter</li> */}
+                  <li>
+                    <a
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      href="https://www.youtube.com/channel/UCGPR3_7W3ZEtf2SB_dZjRRg"
+                    >
+                      YouTube
+                    </a>
+                  </li>
                   <li>
                     <a
                       rel="noopener noreferrer"
@@ -131,14 +139,31 @@ export default function Home() {
                   </li>
                 </ul>
               </div>
-              {/* <div>
-                <span>NETWORK</span>
+              <div className={styles.tryptechElementFull}>
+                <span>Resources</span>
                 <ul>
-                  <li>One</li>
-                  <li>Two</li>
-                  <li>Three</li>
+                  <li>
+                    <a
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      href="https://drive.google.com/file/d/1OC17YlhgkAXuDpz2aFkTjfhS3UNkfu-c/view?usp=sharing"
+                    >
+                      <span className={styles.tag}>FREE</span>
+                      Tips For Tots: Encouraging Children To Speak
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      href="https://www.teacherspayteachers.com/Product/FREEBIE-National-Literacy-Month-Calendar-2020-6133556"
+                    >
+                      <span className={styles.tag}>FREE</span>National Literacy
+                      Month - November Activities Calendar 2020
+                    </a>
+                  </li>
                 </ul>
-              </div> */}
+              </div>
             </div>
             <div style={{ marginBottom: "30px" }} />
             {/* <blockquote>
@@ -146,7 +171,7 @@ export default function Home() {
               achievable for all.
               <span>- ASHA</span>
             </blockquote> */}
-            <small>(c) 2020 Heather Park</small>
+            <small>(c) 2021 Heather Park</small>
           </div>
         </div>
       </main>

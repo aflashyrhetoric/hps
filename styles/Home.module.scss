@@ -176,6 +176,9 @@ $_purple-alt-2: #ede1fc;
     }
   }
 
+  .tryptechElementFull {
+    width: 100% !important;
+  }
   .tryptech {
     display: flex;
     justify-content: space-between;
@@ -238,18 +241,32 @@ $_arrow-color: $_white-ice;
 
 .copied {
   position: absolute;
+  font-family: "Montserrat", sans-serif;
   left: 120px;
-  top: -35px;
+  top: -40px;
   height: 30px;
   width: 80px;
   text-align: center;
   background: $_white-ice;
   color: rgb(22, 22, 22) !important;
   padding: 2px;
-  padding-top: 4px;
+  padding-top: 6px;
   border-radius: 0px;
   margin-left: 3px;
   font-weight: bold;
   border: 0;
   box-shadow: 0 2px 4px 2px rgb(20, 20, 20);
+  border-radius: 3px;
+}
+
+.tag {
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  margin-right: 7px;
+  border-radius: 20px;
+  background: #caffca;
+  color: #2e2e2e !important;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 6px;
 }
