@@ -171,7 +171,7 @@ export default function Home() {
               achievable for all.
               <span>- ASHA</span>
             </blockquote> */}
-            <small>(c) 2021 Heather Park</small>
+            <small>(c) 2022 Heather Park</small>
           </div>
         </div>
       </main>
