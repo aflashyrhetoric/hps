@@ -85,10 +85,11 @@ $_purple-alt-2: #ede1fc;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url("/heather.jpg");
+    background: url("/alt-heather-portrait.jpg");
     // background: $_white-ice;
-    background-size: cover;
+    background-size: 140%;
     background-position: 50% 15%;
+    filter: grayscale(100%);
 
     @include bp(md) {
       background-position: 50% 30%;
@@ -269,4 +270,20 @@ $_arrow-color: $_white-ice;
   font-weight: bold;
   font-size: 12px;
   padding: 6px;
+}
+
+.tagPaid {
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  margin-right: 7px;
+  border-radius: 20px;
+  background: #acf3ff;
+  color: #2e2e2e !important;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 6px;
+}
+
+.plosiveLink {
+  text-decoration: underline;
 }

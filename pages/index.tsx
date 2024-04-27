@@ -15,6 +15,8 @@ export default function Home() {
     }
   }, [copied])
 
+  const currentYear = new Date().getFullYear()
+
   return (
     <>
       <Head>
@@ -49,13 +51,22 @@ export default function Home() {
             className={`${styles.rightInner} animate__animated animate__fadeIn`}
           >
             <h1 style={{ marginBottom: "5px", marginTop: "-3px" }}>
-              hello, i'm heather park
+              Hello! I'm Heather Park.
             </h1>
             <p>
               I am a Korean-English Bilingual Speech Language Pathologist,
-              licensed in New York and certified through the national American
-              Speech-Language-Hearing Association since 2019. Currently working
-              at the DoE to provide bilingual speech-language services.
+              licensed in New York since 2019. I'm currently working at the DoE
+              to provide bilingual speech-language services. I also consult as a
+              Product Advisor for{" "}
+              <a
+                className={styles.plosiveLink}
+                href="https://plosive.app"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Plosive
+              </a>
+              , an online productivity platform for SLPs.
             </p>
             {/* <p>
               I provide bilingual speech-language services with the
@@ -66,7 +77,7 @@ export default function Home() {
             </p> */}
             <p>
               Previously, I’ve worked at public charter schools in Harlem,
-              adapting quickly to manage caseloads of upwards to 55+ students
+              adapting quickly to manage caseloads of upwards to 65+ students
               and strategically leveraging available resources. I’ve also worked
               with patients at various skilled nursing facilities, who presented
               with dysphagia, dysarthria, aphasia, dysphonia, dementia, etc.
@@ -149,7 +160,7 @@ export default function Home() {
                       href="https://www.teacherspayteachers.com/Product/Tips-For-Tots-Encouraging-Your-Children-to-Talk-6526232"
                     >
                       <span className={styles.tag}>FREE</span>
-                      Tips For Tots: Encouraging Your Children To Talk 
+                      Tips For Tots: Encouraging Your Children To Talk
                     </a>
                   </li>
                   <li>
@@ -162,6 +173,17 @@ export default function Home() {
                       Month - November Activities Calendar 2020
                     </a>
                   </li>
+                  <li>
+                    <a
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      href="https://plosive.app"
+                    >
+                      <span className={styles.tagPaid}>PAID</span>
+                      Plosive - A Modern, AI-Assisted Productivity Platform for
+                      School-Based SLPs
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -171,7 +193,7 @@ export default function Home() {
               achievable for all.
               <span>- ASHA</span>
             </blockquote> */}
-            <small>(c) 2022 Heather Park</small>
+            <small>© {currentYear} Heather Park</small>
           </div>
         </div>
       </main>
