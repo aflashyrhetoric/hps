@@ -85,11 +85,11 @@ $_purple-alt-2: #ede1fc;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url("/alt-heather-portrait.jpg");
     // background: $_white-ice;
-    background-size: 140%;
+    background: url("/heather-alt.jpg");
+    background-size: 100%;
     background-position: 50% 15%;
-    filter: grayscale(100%);
+    // filter: grayscale(100%);
 
     @include bp(md) {
       background-position: 50% 30%;
