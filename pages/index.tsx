@@ -28,7 +28,7 @@ export default function Home() {
         /> */}
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Montserrat:wght@300;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:wght@300;700&display=swap"
           rel="stylesheet"
         />
         <link
@@ -81,6 +81,23 @@ export default function Home() {
               and strategically leveraging available resources. I’ve also worked
               with patients at various skilled nursing facilities, who presented
               with dysphagia, dysarthria, aphasia, dysphonia, dementia, etc.
+            </p>
+
+            <p>
+              <span className={styles.italicAndBold}>
+                I am not taking private clients at this time.
+              </span>{" "}
+              If you&apos;re looking to connect with a bilingual Korean-English
+              SLP, please post an inquiry on{" "}
+              <a
+                href="https://www.facebook.com/groups/koreanslps"
+                target="_blank"
+                className={styles.plosiveLink}
+              >
+                the Korean Speech-Language Pathologists Facebook page
+              </a>
+              . For other career-related or personal inquiries, please feel free
+              to contact me via email.
             </p>
 
             {/* <p>I run an online Facebook group </p> */}
